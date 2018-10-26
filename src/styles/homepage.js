@@ -5,11 +5,11 @@ const styles = theme => ({
        fontFamily: 'Fredoka One'
     },
     container1: {
-      marginTop: '2vw',
+      marginTop: '1vw',
       padding: '3vw 0 2vw 0'
     },
     container2: {
-      marginTop: '2vw',
+      marginTop: '1vw',
       padding: '3vw 0 2vw 0'
     },
     paperL: {
@@ -66,8 +66,10 @@ const styles = theme => ({
       fontWeight: 'bold',
       lineHeight: '1.1',
       marginLeft: '1vw',
+      marginTop: '1vw',
       [theme.breakpoints.down('sm')]: {
         fontSize: '70px',
+        marginTop: '0',
       },
       [theme.breakpoints.down('xs')]: {
         color: '#999999',
@@ -103,13 +105,24 @@ const styles = theme => ({
         marginLeft: "-1vw",
       }
     },
+    logoSmall: {
+      color: '#cc6666',
+      fontSize: '25px',
+      lineHeight: 0.6,
+      fontWeight: 'bold',
+      marginTop: '-1vw',
+      '&:hover': {
+        // transform: 'translate(2px, 1px) rotate(270deg)'
+      }
+    },
     card: {
       height: '40vw',
       width: '30vw',
       marginTop: '-1vw',
       [theme.breakpoints.down('sm')]: {
         height: '47vh',
-        width: '33vh'
+        width: '33vh',
+        marginTop: '1vw',
       },
       [theme.breakpoints.down(820)]: {
         height: '42vh',
@@ -152,6 +165,51 @@ const styles = theme => ({
       [theme.breakpoints.down(400)]: {
         height: '38vh',
         width: '23vh'
+      }
+    },
+    appBar: {
+      top: 'auto',
+      bottom: 0,
+      backgroundColor: '#f6eeee',
+      height: '2.8vw',
+      [theme.breakpoints.down('sm')]: {
+        height: '7vw',
+      },
+      [theme.breakpoints.down('xs')]: {
+        height: '10vw',
+      }
+    },
+    toolbar: {
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    iconBut: {
+      '&:hover': {
+        backgroundColor: '#f6eeee', 
+        color: '#993333'
+      }
+    },
+    iconCart: {
+      color: '#a37575',
+      fontSize: '35px',
+      marginTop: '-1vw',
+      '&:hover': {
+        color: '#993333'
+      }
+    },
+    iconMenu: {
+      color: '#a37575',
+      fontSize: '35px',
+      marginTop: '-1vw',
+      '&:hover': {
+        color: '#993333'
+      }
+    },
+    tooltip: {
+      fontSize: '20px',
+      '&:hover': {
+        backgroundColor: '#f6eeee', 
+        color: '#993333',
       }
     }
   });
