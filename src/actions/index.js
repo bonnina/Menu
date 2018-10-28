@@ -1,21 +1,21 @@
 export const location = option => ({
-  type: 'LOCATION',
+  type: 'ADD_LOCATION',
   option
 })
 
 export const time = time => ({
-  type: 'TIME',
+  type: 'ADD_TIME',
   time
 })
 
-export const addToOrder = id => ({
+export const addToOrder = item => ({
   type: 'ADD_TO_ORDER',
-  id
+  item
 })
 
-export const removeFromOrder = id => ({
+export const removeFromOrder = item => ({
   type: 'REMOVE_FROM_ORDER',
-  id
+  item
 })
 
 export const deleteOrder = () => ({
