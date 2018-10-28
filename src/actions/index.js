@@ -18,4 +18,8 @@ export const removeFromOrder = id => ({
   id
 })
 
+export const deleteOrder = () => ({
+  type: 'DELETE_ORDER'
+})
+
   ​
