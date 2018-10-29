@@ -201,7 +201,8 @@ const styles = theme => ({
       color: '#a37575',
       fontSize: '35px',
       marginTop: '-1vw',
-      '&:hover': {
+      '&:active': {
+        backgroundColor: '#f6eeee', 
         color: '#993333'
       }
     },
@@ -210,7 +211,7 @@ const styles = theme => ({
       '&:hover': {
         backgroundColor: '#f6eeee', 
         color: '#993333',
-      }
+      },
     }
   });
 
