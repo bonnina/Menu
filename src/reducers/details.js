@@ -1,11 +1,3 @@
-/*
-let approximateState = {
-  order: [],
-  location: '',
-  time: ''
-}
-*/
-
 const details = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_LOCATION':
@@ -16,11 +8,11 @@ const details = (state = {}, action) => {
     case 'ADD_TIME':
       return  {
         ...state,
-        location: action.time
+        time: action.time
       }
     default:
       return state;
   }
 }
-​
+
 export default details;
