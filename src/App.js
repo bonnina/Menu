@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
+import Menu from './components/Menu';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-// target="_blank"
 
 const THEME = createMuiTheme({
   typography: {
@@ -15,13 +15,14 @@ const THEME = createMuiTheme({
 class App extends Component {
   render() {
     return (
-      <div>
         <MuiThemeProvider theme={THEME}>
-        <BrowserRouter>
-          <Route exact path="/" render={(props) => <Home {...props} />} />
-        </BrowserRouter>
+          <BrowserRouter>
+          <div>
+            <Route exact path="/" render={(props) => <Home {...props} />} />
+            <Route exact path="/menu" render={(props) => <Menu {...props} />} />
+          </div>
+          </BrowserRouter>
         </MuiThemeProvider>
-      </div>
     );
   }
 }
