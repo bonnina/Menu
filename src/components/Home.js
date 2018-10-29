@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -13,9 +14,19 @@ import IconButton from '@material-ui/core/IconButton';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import MenuIcon from '@material-ui/icons/Menu';
 import styles from '../styles/homepage';
+import { location } from '../actions';
 
+const mapStateToProps = function (store) {
+  return {
+    pickedLocation: store.details.location
+  };
+};
 
-function Home (props) {
+const mapDispatchToProps = dispatch => ({
+  location: opt => dispatch(location(opt))
+})
+
+const Home = (props) => {
   const { classes } = props;
 
   return(
@@ -23,8 +34,8 @@ function Home (props) {
     <Grid container className={classes.container} spacing={8} justify="space-evenly">
       <Grid item xs={12} sm={8} lg={8} xl={8}>
         <Grid container className={classes.container1} spacing={16} justify="space-evenly"> 
-          <Link to='#' style={{textDecoration: 'none'}}>
-            <Grid item xs={6} sm={6} lg={6} xl={6} className={classes.item1}>
+          <Link to='#' style={{textDecoration: 'none'}} >
+            <Grid item xs={6} sm={6} lg={6} xl={6} className={classes.item1} onClick={() => props.location('eat in')}>
           <Paper elevation={0} className={classes.paperL}>
             <Typography variant='h1' className={classes.textLeft}>
               eat
@@ -51,8 +62,8 @@ function Home (props) {
         </Grid>
       </Grid>
       <Grid item xs={12} sm={4} lg={4} xl={4}>
-        <Link to='#' style={{textDecoration: 'none'}}>
-          <Grid container className={classes.container2} spacing={0} justify="center">
+        <Link to='#' style={{textDecoration: 'none'}} >
+          <Grid container className={classes.container2} spacing={0} justify="center" onClick={() => props.location('delivery')}>
             <Grid item xs={6} sm={12} lg={12} xl={12}>
               <Paper elevation={0} className={classes.paperR}>
                 <Typography variant='h1' className={classes.order}>
@@ -104,4 +115,6 @@ function Home (props) {
 }
 
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(
+  connect(mapStateToProps, mapDispatchToProps)(Home)
+);
