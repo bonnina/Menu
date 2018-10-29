@@ -21,5 +21,3 @@ export const removeFromOrder = item => ({
 export const deleteOrder = () => ({
   type: 'DELETE_ORDER'
 })
-
-  ​
