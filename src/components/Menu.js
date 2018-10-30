@@ -5,7 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -21,7 +20,7 @@ const Menu = (props) => {
   const { classes } = props;
   
   return (
-    <div className={classes.root}>
+    <div>
       <CssBaseline />
       <Drawer
         className={classes.drawer}
@@ -44,9 +43,11 @@ const Menu = (props) => {
         <Divider />
         <List>
         <ListItem button>
+          <Link to='/food' style={{textDecoration: 'none'}}>
             <ListItemIcon className={classes.listIcon}>
               <LocalDining />
             </ListItemIcon>
+          </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon className={classes.listIcon}>
@@ -65,15 +66,10 @@ const Menu = (props) => {
           </ListItem>
         </List>
       </Drawer>
-      <main className={classes.content}>
-        <Typography variant='h3' className={classes.header} gutterBottom>
-          Click to add:
-        </Typography>
-      </main>
     </div>
   );
 }
 
 export default withStyles(styles)(
-  connect()(Menu)
+  connect(null)(Menu)
 );
