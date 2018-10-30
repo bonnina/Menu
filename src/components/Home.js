@@ -62,7 +62,7 @@ const Home = (props) => {
         </Grid>
       </Grid>
       <Grid item xs={12} sm={4} lg={4} xl={4}>
-        <Link to='/menu' style={{textDecoration: 'none'}} >
+        <Link to='/delivery' style={{textDecoration: 'none'}} >
           <Grid container className={classes.container2} spacing={0} justify="center" onClick={() => props.location('delivery')}>
             <Grid item xs={6} sm={12} lg={12} xl={12}>
               <Paper elevation={0} className={classes.paperR}>
