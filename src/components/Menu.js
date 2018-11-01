@@ -17,7 +17,7 @@ import styles from '../styles/menuStyles';
 
 
 const Menu = (props) => {
-  const { classes } = props;
+  const { classes, match, history } = props;
   
   return (
     <div>
@@ -33,26 +33,28 @@ const Menu = (props) => {
         <div className={classes.toolbar} />
         <List >
           <ListItem button key='text'>
-          <Link to='/' style={{textDecoration: 'none'}}>
+          <Link to='/' style={{textDecoration: 'none'}} onClick={() => {history.push('/')}}>
             <ListItemIcon className={classes.listIcon}> 
               <HomeIcon />
             </ListItemIcon>
-            </Link>
+          </Link>
           </ListItem>
         </List>
         <Divider />
         <List>
         <ListItem button>
-          <Link to='/food' style={{textDecoration: 'none'}}>
+          <Link to={`${match.url}/food`} style={{textDecoration: 'none'}}> 
             <ListItemIcon className={classes.listIcon}>
               <LocalDining />
             </ListItemIcon>
-          </Link>
+          </Link> 
           </ListItem>
           <ListItem button>
-            <ListItemIcon className={classes.listIcon}>
-              <LocalCafe />
-            </ListItemIcon>
+            <Link to={`${match.url}/drinks`} style={{textDecoration: 'none'}}> 
+              <ListItemIcon className={classes.listIcon}>
+                <LocalCafe />
+              </ListItemIcon>
+            </Link> 
           </ListItem>
           <ListItem button >
             <ListItemIcon className={classes.listIcon}> 
@@ -67,7 +69,7 @@ const Menu = (props) => {
         </List>
       </Drawer>
     </div>
-  );
+    );
 }
 
 export default withStyles(styles)(
