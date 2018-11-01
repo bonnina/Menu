@@ -32,7 +32,7 @@ const Menu = (props) => {
       >
         <div className={classes.toolbar} />
         <List >
-          <ListItem button key='text'>
+          <ListItem button key='text' className={classes.listItem}>
           <Link to='/' style={{textDecoration: 'none'}} onClick={() => {history.push('/')}}>
             <ListItemIcon className={classes.listIcon}> 
               <HomeIcon />
@@ -42,26 +42,26 @@ const Menu = (props) => {
         </List>
         <Divider />
         <List>
-        <ListItem button>
+        <ListItem button className={classes.listItem}>
           <Link to={`${match.url}/food`} style={{textDecoration: 'none'}}> 
             <ListItemIcon className={classes.listIcon}>
               <LocalDining />
             </ListItemIcon>
           </Link> 
           </ListItem>
-          <ListItem button>
+          <ListItem button className={classes.listItem}>
             <Link to={`${match.url}/drinks`} style={{textDecoration: 'none'}}> 
               <ListItemIcon className={classes.listIcon}>
                 <LocalCafe />
               </ListItemIcon>
             </Link> 
           </ListItem>
-          <ListItem button >
+          <ListItem button className={classes.listItem}>
             <ListItemIcon className={classes.listIcon}> 
               <ShoppingCart />
             </ListItemIcon>
           </ListItem>
-          <ListItem button >
+          <ListItem button className={classes.listItem}>
             <ListItemIcon className={classes.listIcon}> 
               <Delete />
             </ListItemIcon>
