@@ -8,7 +8,7 @@ const styles = theme => ({
     },
   },
   drawerPaper: {
-    backgroundColor: '#f6eeee',
+    backgroundColor: '#f2f2f2',
     width: 75,
     [theme.breakpoints.down('xs')]: {
       width: 60
