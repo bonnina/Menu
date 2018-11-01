@@ -1,21 +1,4 @@
 const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
-  header: {
-    color: '#b3b3b3',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '40px'
-    },
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '30px'
-    }
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: '',
-    padding: theme.spacing.unit * 3,
-  },
   drawer: {
     width: 75,
     textAlign: 'center',
@@ -32,22 +15,14 @@ const styles = theme => ({
     },
   },
   toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    backgroundColor: '',
-    padding: theme.spacing.unit * 3,
-  },
-  header: {
-    color: '#b3b3b3',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '40px'
-    },
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '30px'
-    }
-  },
   listIcon: {
     color: '#d27979',
+  },
+  listItem: {
+    color: '#d27979',
+    '&:hover': {
+      backgroundColor: '#f6eeee',
+    }
   },
   list: {
     textAlign: 'center',
