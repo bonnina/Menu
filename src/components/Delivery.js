@@ -18,8 +18,8 @@ class Delivery extends React.Component {
       <div className={classes.root}> 
         <Menu match={match} history={history} />
         <main className={classes.content}> 
-          <Typography variant='h3'  className={classes.header} gutterBottom>
-            Click to add:
+          <Typography variant='h4'  className={classes.header} gutterBottom>
+            Click items to add:
           </Typography>
 
           <Route path={`${match.path}/:name`} component={Items}/>
