@@ -10,7 +10,7 @@ class Items extends React.Component {
   render() {
   const { classes, match } = this.props;
   const item = items.find(({ name }) => name === match.params.name);
-
+  
     return (
       <div className={classes.root}>
         <Grid container spacing={8} justify="center" className={classes.container}>
