@@ -8,13 +8,13 @@ export const styles = theme => ({
     }
   },
    text: {
-    fontSize: '55px',
+    fontSize: '50px',
     margin: '0 1.5vw 1.5vw 0',
     textAlign: 'center',
     color: 'white',
-    padding: '0 0 1vw 1vw',
+    padding: '0 0 0.5vw 0.5vw',
     [theme.breakpoints.down('sm')]: {
-     fontSize: '45px',
+     fontSize: '43px',
     },
     [theme.breakpoints.down('xs')]: {
      fontSize: '37px',
@@ -29,9 +29,9 @@ export const styles = theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
-    fontSize: '55px',
+    fontSize: '50px',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '45px',
+      fontSize: '43px',
     },
     [theme.breakpoints.down('xs')]: {
       fontSize: '37px',
@@ -155,6 +155,52 @@ export const items = [
   },
   {
     name: 'drinks',
-    contents: []
+    contents: [
+      {
+        text: 'water',
+        backgroundColor: '#cceeff',
+        space: '4em'
+      },
+      {
+        text: 'coffee',
+        backgroundColor: '#d9b38c',
+        space: '4em'
+      },
+      {
+        text: 'milk',
+        backgroundColor: '#e0e0eb',
+        space: '3.4em'
+      },
+      {
+        text: 'tea',
+        backgroundColor: '#c2d6c2',
+        space: '3em'
+      },
+      {
+        text: 'orange juice',
+        backgroundColor: '#ffa366',
+        space: '7em'
+      },
+      {
+        text: 'apple juice',
+        backgroundColor: '#abedab',
+        space: '6.7em'
+      },
+      {
+        text: 'cocoa',
+        backgroundColor: '#c2a3a3',
+        space: '4em'
+      },
+      {
+        text: 'almond milk',
+        backgroundColor: '#ffddcc',
+        space: '6.8em'
+      },
+      {
+        text: 'yogurt',
+        backgroundColor: '#ffe6ff',
+        space: '4.4em'
+      },
+    ]
   }
 ];
