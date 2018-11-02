@@ -10,6 +10,20 @@ import styles from '../styles/deliveryStyles';
 import Items from './Items';
 import Menu from './Menu';
 import { items } from './food_and_drinks';
+import { addToOrder } from '../actions';
+
+const mapStateToProps = function (store) {
+  return {
+    order: store.order
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  addToOrder: el => {
+    dispatch(addToOrder(el));
+    el.display = 'none'
+  }
+})
 
 class Delivery extends React.Component {
   render() {
@@ -30,7 +44,12 @@ class Delivery extends React.Component {
               <Grid container spacing={8} justify="center" className={classes.container}>
                 {items.map((item) => (
                   item.contents.map((el) => (
-                    <Grid item key={el.text} style={{width: `${el.space}`}} role='button' tabIndex="0">
+                    <Grid item 
+                    key={el.text} 
+                    style={{width: `${el.space}`, cursor: 'pointer', display: `${el.display}`}}
+                    role='button' 
+                    tabIndex="0"
+                    onClick={() => this.props.addToOrder(el)}>
                       <Typography variant="h2" style={{ backgroundColor: `${el.backgroundColor}`}} className={classes.text}>
                       {el.text}
                       </Typography>
@@ -48,7 +67,7 @@ class Delivery extends React.Component {
 }
 
 export default  withStyles(styles)(
-  withRouter( connect()(Delivery) )
+  withRouter( 
+    connect(mapStateToProps, mapDispatchToProps)(Delivery) 
+  )
 );
-
-// ()=>(<Typography> All items </Typography>)

@@ -5,6 +5,20 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import styles from '../styles/itemStyles';
 import { items } from './food_and_drinks';
+import { addToOrder } from '../actions';
+
+const mapStateToProps = function (store) {
+  return {
+    order: store.order
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  addToOrder: el => {
+    dispatch(addToOrder(el));
+    el.display = 'none'
+  }
+})
 
 class Items extends React.Component {
   render() {
@@ -15,7 +29,12 @@ class Items extends React.Component {
       <div className={classes.root}>
         <Grid container spacing={8} justify="center" className={classes.container}>
         {item.contents.map((el) => (
-          <Grid item key={el.text} style={{width: `${el.space}`}} role='button' tabIndex="0">
+          <Grid item 
+          key={el.text} 
+          style={{width: `${el.space}`, cursor: 'pointer', display: `${el.display}`}} 
+          role='button' 
+          tabIndex="0"
+          onClick={() => this.props.addToOrder(el)}>
               <Typography variant="h2" style={{
                 backgroundColor: `${el.backgroundColor}`,
               }} className={classes.text}>
@@ -30,5 +49,5 @@ class Items extends React.Component {
 };
 
 export default withStyles(styles)(
-  connect()(Items) 
+  connect(mapStateToProps, mapDispatchToProps)(Items) 
 );
