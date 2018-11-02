@@ -158,6 +158,16 @@ export const items = [
         backgroundColor: '#ffe6ff',
         space: '4.4em'
       },
+      {
+        text: 'smothie',
+        backgroundColor: '#f2ccff',
+        space: '5em'
+      },
+      {
+        text: 'hot chocolate',
+        backgroundColor: '#e0a385',
+        space: '7.5em'
+      },
     ]
   }
 ];
