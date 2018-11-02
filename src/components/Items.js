@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { styles, items} from '../styles/itemStyles';
+import styles from '../styles/itemStyles';
+import { items } from './food_and_drinks';
 
 class Items extends React.Component {
   render() {
@@ -14,7 +15,7 @@ class Items extends React.Component {
       <div className={classes.root}>
         <Grid container spacing={8} justify="center" className={classes.container}>
         {item.contents.map((el) => (
-          <Grid item key={el.text} style={{width: `${el.space}`}} >
+          <Grid item key={el.text} style={{width: `${el.space}`}} role='button' tabIndex="0">
               <Typography variant="h2" style={{
                 backgroundColor: `${el.backgroundColor}`,
               }} className={classes.text}>
