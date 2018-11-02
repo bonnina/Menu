@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
@@ -21,8 +21,11 @@ class Delivery extends React.Component {
           <Typography variant='h4'  className={classes.header} gutterBottom>
             Click items to add:
           </Typography>
-
-          <Route path={`${match.path}/:name`} component={Items}/>
+          
+          <Switch> 
+            <Route path={`${match.path}/:name`} component={Items}/>
+            <Route path="*" component={()=>(<Typography> All items </Typography>)} />
+          </Switch>
         </main>
       </div>
     </BrowserRouter>
