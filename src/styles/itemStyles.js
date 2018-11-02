@@ -1,4 +1,4 @@
-export const styles = theme => ({
+const styles = theme => ({
   root: {
     fontSize: '60px',
     [theme.breakpoints.down('xs')]: {
@@ -41,3 +41,5 @@ export const styles = theme => ({
     }
   }
 });
+
+export default styles;
