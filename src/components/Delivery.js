@@ -21,7 +21,7 @@ const mapStateToProps = function (store) {
 const mapDispatchToProps = dispatch => ({
   addToOrder: el => {
     dispatch(addToOrder(el));
-    el.display = 'none'
+  //  el.display = 'none'
   }
 })
 
@@ -34,29 +34,32 @@ class Delivery extends React.Component {
       <div className={classes.root}> 
         <Menu match={match} history={history} />
         <main className={classes.content}> 
-          <Typography variant='h4'  className={classes.header} gutterBottom>
-            Click items to add:
-          </Typography>
           
           <Switch> 
             <Route path={`${match.path}/:name`} component={Items}/>
             <Route path="*" component={ ()=> (
-              <Grid container spacing={8} justify="center" className={classes.container}>
-                {items.map((item) => (
-                  item.contents.map((el) => (
-                    <Grid item 
-                    key={el.text} 
-                    style={{width: `${el.space}`, cursor: 'pointer', display: `${el.display}`}}
-                    role='button' 
-                    tabIndex="0"
-                    onClick={() => this.props.addToOrder(el)}>
-                      <Typography variant="h2" style={{ backgroundColor: `${el.backgroundColor}`}} className={classes.text}>
-                      {el.text}
-                      </Typography>
-                    </Grid>
-                  ))
-                ))}
-              </Grid>
+              <div>
+                <Typography variant='h4'  className={classes.header} gutterBottom>
+                Click items to add:
+                </Typography>
+                <Grid container spacing={8} justify="center" className={classes.container}>
+                  {items.map((item) => (
+                    item.contents.map((el) => (
+                      <Grid item 
+                      key={el.text} 
+                      style={{width: `${el.space}`, cursor: 'pointer'}}
+                      role='button' 
+                      tabIndex="0"
+                      onClick={() => this.props.addToOrder(el)}>
+                        <Typography variant="h2" style={{ backgroundColor: `${el.backgroundColor}`}} 
+                        className={classes.text}>
+                        {el.text}
+                        </Typography>
+                      </Grid>
+                    ))
+                  ))}
+                </Grid>
+              </div>
             )} />
           </Switch>
         </main>
