@@ -57,9 +57,11 @@ const Menu = (props) => {
             </Link> 
           </ListItem>
           <ListItem button className={classes.listItem}>
+          <Link to={`${match.url}/order`} style={{textDecoration: 'none'}} > 
             <ListItemIcon className={classes.listIcon}> 
               <ShoppingCart />
             </ListItemIcon>
+            </Link>
           </ListItem>
           <ListItem button className={classes.listItem}>
             <ListItemIcon className={classes.listIcon}> 
