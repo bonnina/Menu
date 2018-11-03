@@ -1,13 +1,14 @@
 const styles = theme => ({
   root: {
-    fontSize: '60px',
-    [theme.breakpoints.down('xs')]: {
-      marginLeft: '-4vw',
-      marginRight: '-5vw',
-      fontSize: '20px',
-    }
+    fontSize: '60px'
   },
-   text: {
+  content: {
+    flexGrow: 1,
+    backgroundColor: 'white',
+    padding: theme.spacing.unit * 3,
+    height: '100vh'
+  },
+  text: {
     fontSize: '50px',
     margin: '0 1.5vw 1.5vw 0',
     textAlign: 'center',
@@ -39,7 +40,22 @@ const styles = theme => ({
     [theme.breakpoints.down('385')]: {
       fontSize: '30px',
     }
-  }
+  },
+  header: {
+    color: '#d9d9d9',
+    marginLeft: '10px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '40px'
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '30px',
+      marginLeft: '-1px',
+    },
+    [theme.breakpoints.down('365')]: {
+      fontSize: '25px',
+      marginLeft: '-5px',
+    },
+  },
 });
 
 export default styles;
