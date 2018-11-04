@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import styles from '../styles/itemStyles';
 import { items } from './food_and_drinks';
-import { addToOrder } from '../actions';
+import { addToOrder, removeFromOrder } from '../actions';
 
 const mapStateToProps = function (store) {
   return {
@@ -17,6 +17,9 @@ const mapDispatchToProps = dispatch => ({
   addToOrder: el => {
     dispatch(addToOrder(el));
   //  el.display = 'none'
+  },
+  removeFromOrder: el => {
+    dispatch(removeFromOrder(el));
   }
 })
 
@@ -25,8 +28,10 @@ class Items extends React.Component {
   const { classes, match } = this.props;
   let arr = null; 
   let heading = '';
+  let order = false;
   const item = items.find(({ name }) => name === match.params.name);
   if (match.params.name === 'order') {
+    order = true;
     arr = this.props.order;
     heading = 'Your order:';
   } 
@@ -48,7 +53,7 @@ class Items extends React.Component {
           style={{width: `${el.space}`, cursor: 'pointer'}} 
           role='button' 
           tabIndex="0"
-          onClick={() => this.props.addToOrder(el)}>
+          onClick={() => {order ? this.props.removeFromOrder(el) : this.props.addToOrder(el)}}>
               <Typography variant="h2" style={{ backgroundColor: `${el.backgroundColor}`}} 
               className={classes.text}>
               {el.text}
