@@ -6,7 +6,7 @@ const order = (state = [], action) => {
         action.item
       ]
     case 'REMOVE_FROM_ORDER':
-      return state.filter(el => el.id !== action.item.id)
+      return state.filter(el => el.text !== action.item.text)
     case 'DELETE_ORDER':
       return []
     default:
