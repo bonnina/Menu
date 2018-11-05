@@ -42,4 +42,3 @@ const webFontConfig = {
 WebFont.load(webFontConfig);
 
 serviceWorker.unregister();
-//  http://bit.ly/CRA-PWA
