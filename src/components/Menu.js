@@ -13,11 +13,28 @@ import LocalDining from '@material-ui/icons/LocalDining';
 import LocalCafe from '@material-ui/icons/LocalCafe';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import Delete from '@material-ui/icons/Delete';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import styles from '../styles/menuStyles';
 
 
-const Menu = (props) => {
-  const { classes, match, history } = props;
+class Menu extends React.Component {
+  state = {
+    open: false,
+  };
+
+  handleClickOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
+  render() {
+  const { classes, match, history } = this.props;
   
   return (
     <div>
@@ -63,15 +80,32 @@ const Menu = (props) => {
             </ListItemIcon>
             </Link>
           </ListItem>
-          <ListItem button className={classes.listItem}>
+          <ListItem button className={classes.listItem} onClick={this.handleClickOpen}>
             <ListItemIcon className={classes.listIcon}> 
               <Delete />
             </ListItemIcon>
           </ListItem>
+          <Dialog
+          open={this.state.open}
+          onClose={this.handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">{"Cancel your order?"}</DialogTitle>
+          <DialogActions>
+            <Button onClick={this.handleClose}>
+              Yes
+            </Button>
+            <Button onClick={this.handleClose} autoFocus>
+              Return
+            </Button>
+          </DialogActions>
+        </Dialog>
         </List>
       </Drawer>
     </div>
     );
+  }
 }
 
 export default withStyles(styles)(
