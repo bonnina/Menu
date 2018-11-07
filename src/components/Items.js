@@ -6,10 +6,12 @@ import Grid from '@material-ui/core/Grid';
 import styles from '../styles/itemStyles';
 import { items } from './food_and_drinks';
 import { addToOrder, removeFromOrder } from '../actions';
+import Details from './Details';
 
 const mapStateToProps = function (store) {
   return {
-    order: store.order
+    order: store.order,
+    location: store.details.location
   };
 };
 
@@ -28,12 +30,14 @@ class Items extends React.Component {
   const { classes, match } = this.props;
   let arr = null; 
   let heading = '';
+  let just = 'center';
   let order = false;
   const item = items.find(({ name }) => name === match.params.name);
   if (match.params.name === 'order') {
     order = true;
     arr = this.props.order;
     heading = 'Your order:';
+    just = 'flex-start';
   } 
   else {
      arr = item.contents;
@@ -45,8 +49,16 @@ class Items extends React.Component {
         <Typography variant='h4'  className={classes.header} gutterBottom>
         {heading}
         </Typography>
+        {(order && this.props.order.length !== 0) 
+        ? <Typography variant='h6'  className={classes.subHeader} gutterBottom>
+          click items to remove
+          </Typography>
+        : order && <Typography variant='h6'  className={classes.subHeader} gutterBottom>
+          nothing was added yet
+          </Typography>
+        }
         <main className={classes.content}> 
-        <Grid container spacing={8} justify="center" className={classes.container}>
+        <Grid container spacing={8} justify={just} className={classes.container}>
         {arr.map((el) => (
           <Grid item 
           key={el.text} 
@@ -61,6 +73,9 @@ class Items extends React.Component {
           </Grid>
         ))}
         </Grid>
+        {order &&
+        <Details/>
+        }
         </main>
       </div>
     )
