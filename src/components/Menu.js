@@ -15,10 +15,17 @@ import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import Delete from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import styles from '../styles/menuStyles';
+import { deleteOrder } from '../actions';
 
+const mapStateToProps = function (store) {
+  return {
+    order: store.order
+  };
+};
 
 class Menu extends React.Component {
   state = {
@@ -88,15 +95,18 @@ class Menu extends React.Component {
           <Dialog
           open={this.state.open}
           onClose={this.handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
-          <DialogTitle id="alert-dialog-title">{"Cancel your order?"}</DialogTitle>
-          <DialogActions>
-            <Button onClick={this.handleClose}>
+          aria-labelledby="alert-dialog"
+          >
+          <DialogContent> 
+          <DialogContentText id="alert-dialog" className={classes.dialogText}>
+          Cancel your order?
+          </DialogContentText>
+          </DialogContent>
+          <DialogActions className={classes.dialogAct}>
+            <Button onClick={() => {this.props.deleteOrder(); this.handleClose()}} className={classes.dialogButton}>
               Yes
             </Button>
-            <Button onClick={this.handleClose} autoFocus>
+            <Button onClick={this.handleClose} autoFocus className={classes.dialogButton}>
               Return
             </Button>
           </DialogActions>
@@ -109,5 +119,5 @@ class Menu extends React.Component {
 }
 
 export default withStyles(styles)(
-  connect(null)(Menu)
+  connect(mapStateToProps, { deleteOrder })(Menu)
 );
