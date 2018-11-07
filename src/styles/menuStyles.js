@@ -26,6 +26,19 @@ const styles = theme => ({
   },
   list: {
     textAlign: 'center',
+  },
+  dialogText: {
+    color: '#d27979', 
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '3vw',
+    },
+  //  fontSize: '4vw',
+  },
+  dialogAct: {
+    textAlign: 'center',
+  },
+  dialogButton: {
+    color: '#999999',
   }
 });
 
