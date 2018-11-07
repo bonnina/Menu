@@ -56,6 +56,11 @@ const styles = theme => ({
       marginLeft: '-5px',
     },
   },
+  subHeader: {
+    color: '#999999',
+    marginLeft: '10px',
+    marginBottom: '-10px'
+  },
 });
 
 export default styles;
