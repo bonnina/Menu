@@ -10,6 +10,11 @@ const details = (state = {}, action) => {
         ...state,
         time: action.time
       }
+    case 'ADD_ADDRESS':
+      return  {
+        ...state,
+        address: action.address
+      }
     default:
       return state;
   }

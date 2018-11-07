@@ -8,6 +8,11 @@ export const time = time => ({
   time
 })
 
+export const address = address => ({
+  type: 'ADD_ADDRESS',
+  address
+})
+
 export const addToOrder = item => ({
   type: 'ADD_TO_ORDER',
   item
