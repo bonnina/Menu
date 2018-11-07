@@ -56,37 +56,37 @@ class Menu extends React.Component {
       >
         <div className={classes.toolbar} />
         <List >
-          <ListItem button key='text' className={classes.listItem}>
           <Link to='/' style={{textDecoration: 'none'}} onClick={() => {history.push('/')}}>
-            <ListItemIcon className={classes.listIcon}> 
-              <HomeIcon />
-            </ListItemIcon>
+            <ListItem button className={classes.listItem}>
+              <ListItemIcon className={classes.listIcon}> 
+                <HomeIcon />
+              </ListItemIcon>
+            </ListItem>
           </Link>
-          </ListItem>
         </List>
         <Divider />
         <List>
-        <ListItem button className={classes.listItem}>
           <Link to={`${match.url}/food`} style={{textDecoration: 'none'}}> 
-            <ListItemIcon className={classes.listIcon}>
-              <LocalDining />
-            </ListItemIcon>
+            <ListItem button className={classes.listItem}>
+              <ListItemIcon className={classes.listIcon}>
+                <LocalDining />
+              </ListItemIcon>
+            </ListItem>
           </Link> 
-          </ListItem>
-          <ListItem button className={classes.listItem}>
-            <Link to={`${match.url}/drinks`} style={{textDecoration: 'none'}}> 
+          <Link to={`${match.url}/drinks`} style={{textDecoration: 'none'}}> 
+            <ListItem button className={classes.listItem}>
               <ListItemIcon className={classes.listIcon}>
                 <LocalCafe />
               </ListItemIcon>
-            </Link> 
-          </ListItem>
-          <ListItem button className={classes.listItem}>
+            </ListItem>
+          </Link> 
           <Link to={`${match.url}/order`} style={{textDecoration: 'none'}} > 
-            <ListItemIcon className={classes.listIcon}> 
-              <ShoppingCart />
-            </ListItemIcon>
-            </Link>
-          </ListItem>
+            <ListItem button className={classes.listItem}>
+              <ListItemIcon className={classes.listIcon}> 
+                <ShoppingCart />
+              </ListItemIcon>
+             </ListItem>
+          </Link>
           <ListItem button className={classes.listItem} onClick={this.handleClickOpen}>
             <ListItemIcon className={classes.listIcon}> 
               <Delete />
