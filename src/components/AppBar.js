@@ -5,8 +5,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import ShoppingCart from '@material-ui/icons/ShoppingCart';
-import MenuIcon from '@material-ui/icons/Menu';
+// import ShoppingCart from '@material-ui/icons/ShoppingCart';
+// import MenuIcon from '@material-ui/icons/Menu';
 import styles from '../styles/appBarStyles';
 
 const Appbar = (props) => {
@@ -24,6 +24,7 @@ const Appbar = (props) => {
             </Typography>
           </IconButton>
         </Tooltip>
+        {/*
         <div>
           <IconButton aria-label="Open drawer" className={classes.iconBut}>
             <MenuIcon className={classes.iconMenu}/> 
@@ -34,6 +35,7 @@ const Appbar = (props) => {
             </IconButton>
           </Tooltip>
         </div>
+        */}
       </Toolbar>
     </AppBar>
   );
