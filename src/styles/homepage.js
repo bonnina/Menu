@@ -1,3 +1,4 @@
+// <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Bread">Bread</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 const styles = theme => ({
     container: {
@@ -68,7 +69,7 @@ const styles = theme => ({
       marginLeft: '1vw',
       marginTop: '1vw',
       [theme.breakpoints.down('sm')]: {
-        fontSize: '70px',
+        fontSize: '58px',
         marginTop: '0',
       },
       [theme.breakpoints.down('xs')]: {
@@ -106,55 +107,59 @@ const styles = theme => ({
       }
     },
     card: {
-      height: '40vw',
+      height: '50vw',
       width: '30vw',
-      marginTop: '-1vw',
       [theme.breakpoints.down('sm')]: {
-        height: '47vh',
-        width: '33vh',
-        marginTop: '1vw',
+        height: '38vh',
+        width: '32vh',
       },
       [theme.breakpoints.down(820)]: {
-        height: '42vh',
-        width: '29vh'
+        height: '36vh',
+        width: '30vh',
       },
       [theme.breakpoints.down(700)]: {
-        height: '38vh',
-        width: '26h'
+        height: '33vh',
+        width: '20h',
+        marginLeft: '-1.8vw',
       },
       [theme.breakpoints.down('xs')]: {
         marginLeft: 0,
-        height: '40vh',
+        height: '32vh',
         width: '25vh'
       },
       [theme.breakpoints.down(400)]: {
-        height: '38vh',
-        width: '23vh'
+        height: '28vh',
+        width: '20vh'
       }
     },
     media: {
-      height: '40vw',
+      height: '30vw',
       width: '30vw',
+      marginTop: '40px',
       [theme.breakpoints.down('sm')]: {
-        height: '47vh',
-        width: '33vh'
+        height: '32vh',
+        width: '32vh',
+        marginTop: '30px',
       },
       [theme.breakpoints.down(820)]: {
-        height: '42vh',
-        width: '29vh'
+        height: '30vh',
+        width: '30vh',
       },
       [theme.breakpoints.down(700)]: {
-        height: '38vh',
-        width: '26h'
+        height: '30vh',
+        width: '19h',
+        marginLeft: '-1.8vw',
+        marginTop: '25px',
       },
       [theme.breakpoints.down('xs')]: {
         marginLeft: 0,
-        height: '40vh',
-        width: '25vh'
+        height: '27vh',
+        width: '25vh',
+        marginTop: '35px',
       },
       [theme.breakpoints.down(400)]: {
-        height: '38vh',
-        width: '23vh'
+        height: '22vh',
+        width: '20vh'
       }
     },
   });
