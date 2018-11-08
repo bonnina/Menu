@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -16,6 +17,7 @@ const Appbar = (props) => {
     <AppBar position="fixed" className={classes.appBar} >
       <Toolbar className={classes.toolbar}>
         <Tooltip title="about nana" className={classes.tooltip}>
+        <Link to='/about' style={{ textDecoration: 'none' }} >
           <IconButton className={classes.iconBut} aria-label="logo">
             <Typography variant='h1' className={classes.logoSmall} gutterBottom>
             na
@@ -23,6 +25,7 @@ const Appbar = (props) => {
             na
             </Typography>
           </IconButton>
+        </Link>
         </Tooltip>
         {/*
         <div>
