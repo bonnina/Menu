@@ -3,16 +3,6 @@ export const location = option => ({
   option
 })
 
-export const time = time => ({
-  type: 'ADD_TIME',
-  time
-})
-
-export const address = address => ({
-  type: 'ADD_ADDRESS',
-  address
-})
-
 export const addToOrder = item => ({
   type: 'ADD_TO_ORDER',
   item
