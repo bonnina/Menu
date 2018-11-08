@@ -5,7 +5,7 @@ export const items = [
     contents: [
       {
         text: 'eggs',
-        backgroundColor: '#ffff4d',
+        backgroundColor: '#d27979',
         space: '3.4em'
       },
       {
@@ -20,7 +20,7 @@ export const items = [
       },
       {
         text: 'apple',
-        backgroundColor: '#dbfa9e',
+        backgroundColor: '#e0b8b8',
         space: '4.7'
       },
       {
@@ -30,32 +30,32 @@ export const items = [
       },
       {
         text: 'cereal',
-        backgroundColor: '#e5f2ff',
+        backgroundColor: '#ecc6c6',
         space: '4.2em'
       },
       {
         text: 'cheese',
-        backgroundColor: '#ffeb99',
+        backgroundColor: '#e6b3b3',
         space: '4.5em'
       },
       {
         text: 'grapes',
-        backgroundColor: '#e5ccff',
+        backgroundColor: '#e6b3cc',
         space: '4.4em'
       },
       {
         text: 'avocado',
-        backgroundColor: '#c1f0c1',
+        backgroundColor: '#d6c2c2',
         space: '5.2em'
       },
       {
         text: 'cookies',
-        backgroundColor: '#f0d175',
+        backgroundColor: '#e6ccb3',
         space: '4.7em'
       },
       {
         text: 'honey',
-        backgroundColor: '#fff0b3',
+        backgroundColor: '#d98c8c',
         space: '4.1em'
       },
       {
@@ -70,12 +70,12 @@ export const items = [
       },
       {
         text: 'spinach',
-        backgroundColor: '#99e699',
+        backgroundColor: '#e0b8b8',
         space: '4.9em'
       },
       {
         text: 'banana',
-        backgroundColor: '#fcfc9c',
+        backgroundColor: '#fed9cd',
         space: '4.7em'
       },
       {
@@ -95,7 +95,7 @@ export const items = [
       },
       { 
         text: 'pear',
-        backgroundColor: '#d5ff80',
+        backgroundColor: '#df9f9f',
         space: '3.5em'
       },
       {
@@ -105,7 +105,7 @@ export const items = [
       },
       {
         text: 'fries',
-        backgroundColor: '#f5f589',
+        backgroundColor: '#dfbf9f',
         space: '4.4em'
       },
     ]
@@ -115,7 +115,7 @@ export const items = [
     contents: [
       {
         text: 'water',
-        backgroundColor: '#cceeff',
+        backgroundColor: '#d1c7c7',
         space: '4em'
       },
       {
@@ -130,17 +130,17 @@ export const items = [
       },
       {
         text: 'tea',
-        backgroundColor: '#c2d6c2',
+        backgroundColor: '#e6b3cc',
         space: '3em'
       },
       {
         text: 'orange juice',
-        backgroundColor: '#ffa366',
+        backgroundColor: '#f5cca3',
         space: '7em'
       },
       {
         text: 'apple juice',
-        backgroundColor: '#abedab',
+        backgroundColor: '#ecc6c6',
         space: '6.7em'
       },
       {
@@ -160,7 +160,7 @@ export const items = [
       },
       {
         text: 'smothie',
-        backgroundColor: '#f2ccff',
+        backgroundColor: '#d27979',
         space: '5em'
       },
       {
