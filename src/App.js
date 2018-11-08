@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Delivery from './components/Delivery';
+import About from './components/About';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const THEME = createMuiTheme({
@@ -20,6 +21,7 @@ class App extends Component {
           <div>
             <Route exact path='/' render={(props) => <Home {...props} />} />
             <Route exact path="/delivery" render={(props) => <Delivery {...props} />} />
+            <Route exact path="/about" render={(props) => <About {...props} />} />
           </div>
           </BrowserRouter>
         </MuiThemeProvider>
