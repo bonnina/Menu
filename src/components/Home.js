@@ -30,7 +30,7 @@ class Home extends React.Component {
         <Grid container className={classes.container} spacing={8} justify="space-evenly">
           <Grid item xs={12} sm={8} lg={8} xl={8}>
             <Grid container className={classes.container1} spacing={16} justify="space-evenly">
-              <Link to='#' style={{ textDecoration: 'none' }} >
+              <Link to='/delivery' style={{ textDecoration: 'none' }} >
                 <Grid item xs={6} sm={6} lg={6} xl={6} className={classes.item1} onClick={() => this.props.location('eat in')}>
                   <Paper elevation={0} className={classes.paperL}>
                     <Typography variant='h1' className={classes.textLeft}>
@@ -47,10 +47,10 @@ class Home extends React.Component {
                 </Grid>
               </Link>
               <Grid item xs={6} sm={6} lg={6} xl={6}>
-                <Card className={classes.card}>
+                <Card className={classes.card} elevation={0}>
                   <CardMedia
                     className={classes.media}
-                    image={require('./home.jpg')}
+                    image={require('./bread.svg')}
                     title="breakfast"
                   />
                 </Card>
