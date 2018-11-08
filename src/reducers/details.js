@@ -5,16 +5,6 @@ const details = (state = {}, action) => {
         ...state,
         location: action.option
       }
-    case 'ADD_TIME':
-      return  {
-        ...state,
-        time: action.time
-      }
-    case 'ADD_ADDRESS':
-      return  {
-        ...state,
-        address: action.address
-      }
     default:
       return state;
   }
