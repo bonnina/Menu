@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import { Grid, Typography } from '@material-ui/core';
 import styles from '../styles/itemStyles';
 import { items } from './food_and_drinks';
 import { addToOrder, removeFromOrder } from '../actions';

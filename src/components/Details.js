@@ -1,11 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import { FormControl, InputLabel, Input, Typography, Button } from '@material-ui/core';
 import styles from '../styles/detailStyles';
 
 const mapStateToProps = function (store) {

@@ -1,25 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import HomeIcon from '@material-ui/icons/Home';
-import LocalDining from '@material-ui/icons/LocalDining';
-import LocalCafe from '@material-ui/icons/LocalCafe';
-import ShoppingCart from '@material-ui/icons/ShoppingCart';
-import Delete from '@material-ui/icons/Delete';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogActions from '@material-ui/core/DialogActions';
+import { LocalDining, LocalCafe, ShoppingCart, Delete } from '@material-ui/icons';
 import styles from '../styles/menuStyles';
 import { deleteOrder } from '../actions';
+import { withStyles } from '@material-ui/core/styles';
+import { Drawer,
+         CssBaseline,
+         List,
+         Divider,
+         ListItem,
+         ListItemIcon,
+         Button,
+         Dialog,
+         DialogContent,
+         DialogContentText,
+         DialogActions } from '@material-ui/core';
+
 
 const mapStateToProps = function (store) {
   return {

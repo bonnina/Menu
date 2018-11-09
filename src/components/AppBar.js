@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Tooltip from '@material-ui/core/Tooltip';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
+import { Typography, Tooltip, AppBar, Toolbar, IconButton } from '@material-ui/core';
 // import ShoppingCart from '@material-ui/icons/ShoppingCart';
 // import MenuIcon from '@material-ui/icons/Menu';
 import styles from '../styles/appBarStyles';
